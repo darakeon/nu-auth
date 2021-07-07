@@ -58,6 +58,14 @@ ex:
 ./Authorizer/bin/Debug/net5.0/Authorizer < Test/scenarios/transaction_multiple_violation_input
 ```
 
+## Build copiando projeto para dentro do docker
+
+```
+docker build . -t local-dotnet -f local-dotnet.dockerfile
+docker build . -t local-auth -f local-auth.dockerfile
+docker run -v <caminho-arquivo>:/var/file local-auth ./Authorizer /var/file/<nome-arquivo>
+```
+
 # Notas adicionais para avaliação
 
 Casos de testes diferentes foram adicionados dentro da pasta scenarios.

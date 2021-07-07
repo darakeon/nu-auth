@@ -4,5 +4,4 @@ authorizer.zip
 .vs
 bin
 obj
-authorizer/*.json
 *.user

@@ -1,0 +1,5 @@
+*.vs*
+authorizer/*/bin
+authorizer/*/obj
+authorizer/*/*.user
+authorizer/*/TestResults
