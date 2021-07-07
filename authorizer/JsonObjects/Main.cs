@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Linq;
 
 namespace Authorizer.JsonObjects
 {
@@ -11,13 +11,15 @@ namespace Authorizer.JsonObjects
 			Violations = new List<String>();
 		}
 
-		[JsonProperty("account")]
 		public Account Account { get; set; }
-
-		[JsonProperty("transaction")]
 		public Transaction Transaction { get; set; }
-
-		[JsonProperty("violations")]
 		public List<String> Violations { get; set; }
+
+		public Boolean NoViolations => !Violations.Any();
+
+		public void AddViolation(String violation)
+		{
+			Violations.Add(violation);
+		}
 	}
 }
