@@ -4,6 +4,7 @@
 - Objetos usados para conversão separados em pasta própria
 - Impressão de resultado no programa em si, ao invés de dentro do processador
 - Adicionado teste automatizado em projeto a parte, para separação de conceitos
+- Testes de unidade não foram adicionados para serem mantidos os métodos privados
 
 # Justificativa de uso de frameworks e bibliotecas
 
