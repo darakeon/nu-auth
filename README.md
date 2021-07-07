@@ -41,3 +41,8 @@ dotnet build
 ```
 
 # Notas adicionais para avaliação
+
+Casos de testes diferentes foram adicionados dentro da pasta scenarios.
+Ao rodar os testes do projeto, aparece como um teste só, mas a mensagem
+traz qual o teste deu erro. Se der erro em mais de um, ele junta todos
+os erros para retornar depois.
