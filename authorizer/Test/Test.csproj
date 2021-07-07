@@ -18,70 +18,70 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="scenarios\input_0">
+    <None Update="scenarios\first_example_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_1">
+    <None Update="scenarios\account_creation_success_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_10">
+    <None Update="scenarios\application_state_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_2">
+    <None Update="scenarios\account_creation_violation_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_3">
+    <None Update="scenarios\transaction_success_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_4">
+    <None Update="scenarios\transaction_account_not_initialized_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_5">
+    <None Update="scenarios\transaction_card_not_active_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_6">
+    <None Update="scenarios\transaction_insufficient_limit_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_7">
+    <None Update="scenarios\transaction_high_frequency_small_interval_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_8">
+    <None Update="scenarios\transaction_double_transaction_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\input_9">
+    <None Update="scenarios\transaction_multiple_violation_input">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_0">
+    <None Update="scenarios\first_example_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_1">
+    <None Update="scenarios\account_creation_success_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_10">
+    <None Update="scenarios\application_state_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_2">
+    <None Update="scenarios\account_creation_violation_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_3">
+    <None Update="scenarios\transaction_success_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_4">
+    <None Update="scenarios\transaction_account_not_initialized_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_5">
+    <None Update="scenarios\transaction_card_not_active_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_6">
+    <None Update="scenarios\transaction_insufficient_limit_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_7">
+    <None Update="scenarios\transaction_high_frequency_small_interval_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_8">
+    <None Update="scenarios\transaction_double_transaction_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="scenarios\output_9">
+    <None Update="scenarios\transaction_multiple_violation_output">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using Authorizer;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -10,26 +11,37 @@ namespace Test
 		[TestMethod]
 		public void TestAllFiles()
 		{
-			var inputPaths = Directory.GetFiles("scenarios", "input*");
+			var inputPaths = Directory.GetFiles("scenarios", "*input");
 
 			foreach (var inputPath in inputPaths)
 			{
-				var expectedOutputPath = inputPath.Replace("input_", "output_");
+				var name = inputPath.Substring(0, inputPath.Length - 6);
+				var expectedOutputPath = $"{name}_output";
 
 				var input = File.ReadAllLines(inputPath);
 				var expectedOutputs = File.ReadAllLines(expectedOutputPath);
 
 				var processor = new Processor(input);
 
-				var actualOutputs = processor.Interpret();
+				var actualOutputs = processor.Interpret().ToArray();
 
-				Assert.AreEqual(expectedOutputs.Length, actualOutputs.Count);
+				Assert.AreEqual(
+					expectedOutputs.Length, actualOutputs.Length,
+					$"\n\nCase {name}" +
+					$"\nExpected: {expectedOutputs.Length} lines" +
+					$"\nActual: {actualOutputs.Length} lines"
+				);
 
 				for (var o = 0; o < expectedOutputs.Length; o++)
 				{
 					var expectedOutput = expectedOutputs[o];
 					var actualOutput = actualOutputs[o];
-					Assert.AreEqual(expectedOutput, actualOutput);
+					Assert.AreEqual(
+						expectedOutput, actualOutput,
+						$"\n\nCase {name}, line {o+1}:" +
+						$"\nExpected: {expectedOutput}" +
+						$"\nActual: {actualOutput}"
+					);
 				}
 			}
 		}
