@@ -13,31 +13,49 @@
 Usado comumente para converter jsons para objetos e objetos para json
 em .NET. Recomendado inclusive pela Microsoft.
 
-# Como compilar e executar
+# Compilar e executar
 
-## Fazer o build do docker no root do projeto
+Pode ser feito com a imagem de dotnet e executando os comandos
+manualmente ou pode ser usada a máquina já copiando o autorizador
+para dentro dela. Ela roda os testes em seu build e é baseada na
+imagem dotnet.
 
-```
-docker build . -t authorizer
-```
+## Build manual do projeto
 
-## Rodar a máquina colocando a pasta da solução como volume
-
-```
-REM windows
-docker run -it -v %cd%\authorizer:/var/auth authorizer
-```
+Rodar build na raiz do projeto:
 
 ```
-# linux
-docker run -it -v $(pwd)/authorizer:/var/auth authorizer
+docker build . -t local-dotnet -f local-dotnet.dockerfile
 ```
 
-## Rodar o projeto
+Para iniciar máquina em windows:
+
+```
+docker run -it -v %cd%\authorizer:/var/auth local-dotnet
+```
+
+Para iniciar máquina em linux:
+
+```
+docker run -it -v $(pwd)/authorizer:/var/auth local-dotnet
+```
+
+### Rodar testes dentro do docker
+
+```
+dotnet test
+```
+
+### Rodar o projeto dentro do docker
 
 ```
 dotnet build
-./bin/Debug/net5.0/Authorizer
+./Authorizer/bin/Debug/net5.0/Authorizer < <caminho-do-arquivo>
+```
+
+ex:
+```
+./Authorizer/bin/Debug/net5.0/Authorizer < Test/scenarios/transaction_multiple_violation_input
 ```
 
 # Notas adicionais para avaliação
