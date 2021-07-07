@@ -1,1 +1,7 @@
 authorizer.zip
+
+# C#
+.vs
+bin
+obj
+authorizer/*.json

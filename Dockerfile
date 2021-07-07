@@ -32,3 +32,8 @@ RUN echo "echo -----------------------------------------------------------------
 RUN echo "printf '\e[38;5;51m'" >> ~/.bashrc
 RUN echo "dotnet --version" >> ~/.bashrc
 RUN echo "printf '\e[38;5;253m'" >> ~/.bashrc
+
+RUN mkdir /var/auth
+WORKDIR /var/auth
+
+CMD bash
