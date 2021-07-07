@@ -1,7 +1,8 @@
 # Decisões técnicas e arquiteturais
 
-- Separado leitor de input em uma extensão, para simplificar o código da Main
+- Separado leitor de input em uma extensão, para simplificar o código do programa
 - Objetos usados para conversão separados em pasta própria
+- Impressão de resultado no programa em si, ao invés de dentro do processador
 
 # Justificativa de uso de frameworks e bibliotecas
 

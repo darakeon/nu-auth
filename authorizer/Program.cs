@@ -6,13 +6,13 @@ namespace Authorizer
 	{
 		public static void Main(String[] args)
 		{
-			var lines = Console.In.ExtractLines();
+			var input = Console.In.ExtractLines();
+			
+			var output = new Processor(input).Interpret();
 
-			var converter = new Processor();
-
-			foreach (var line in lines)
+			foreach (var line in output)
 			{
-				converter.Interpret(line);
+				Console.WriteLine(line);
 			}
 		}
 	}

@@ -8,12 +8,30 @@ namespace Authorizer
 {
 	class Processor
 	{
+		private readonly IList<String> input;
+		private readonly IList<String> output;
+
 		private Account account;
+		private readonly IList<Transaction> transactions;
 
-		private IList<Transaction> transactions
-			= new List<Transaction>();
+		public Processor(IList<String> input)
+		{
+			this.input = input;
+			output = new List<String>();
+			transactions = new List<Transaction>();
+		}
 
-		public void Interpret(String json)
+		public IList<String> Interpret()
+		{
+			foreach (var line in input)
+			{
+				interpret(line);
+			}
+
+			return output.ToList();
+		}
+
+		private void interpret(String json)
 		{
 			var obj = JsonConvert.DeserializeObject<Main>(json);
 
@@ -99,7 +117,7 @@ namespace Authorizer
 				NullValueHandling = NullValueHandling.Ignore
 			};
 
-			Console.WriteLine(
+			output.Add(
 				JsonConvert.SerializeObject(
 					printed,
 					settings
