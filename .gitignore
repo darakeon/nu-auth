@@ -5,3 +5,4 @@ authorizer.zip
 bin
 obj
 authorizer/*.json
+*.user

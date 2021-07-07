@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace Authorizer
 {
-	class Processor
+	public class Processor
 	{
 		private readonly IList<String> input;
 		private readonly IList<String> output;

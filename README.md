@@ -3,6 +3,7 @@
 - Separado leitor de input em uma extensão, para simplificar o código do programa
 - Objetos usados para conversão separados em pasta própria
 - Impressão de resultado no programa em si, ao invés de dentro do processador
+- Adicionado teste automatizado em projeto a parte, para separação de conceitos
 
 # Justificativa de uso de frameworks e bibliotecas
 
